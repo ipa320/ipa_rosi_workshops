@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="snp_ur_description">
+
+  <xacro:include filename="$(find ur_description)/urdf/ur5.urdf.xacro"/>
+  <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" />
+  <xacro:include filename="$(find ur_description)/urdf/ur.transmission.xacro" />
+  <xacro:include filename="$(find snp_ur_description)/urdf/snp_tool.urdf.xacro"/>
+  <!--xacro:include filename="$(find snp_ur_description)/urdf/ur_table.urdf.xacro"/-->
+
+  <xacro:property name="prefix" value=""/>
+
+  <!-- robot -->
+  <xacro:ur5_robot prefix="${prefix}" joint_limited="true"/>
+
+  <!-- world-->
+  <link name="world_frame"/>
+  <joint name="world_to_baselink" type="fixed">
+    <parent link="world_frame"/>
+    <child link="${prefix}base_link"/>
+    <origin  xyz="0 0 0" rpy="0 0 ${pi}" />
+  </joint>
+
+
+  <!-- table-->
+  <!--xacro:table parent="world_frame">
+    <origin  xyz="0 0 -0.16" rpy="0 0 0" />
+  </xacro:table-->
+
+  <!-- tool -->
+  <xacro:snp_tool parent="${prefix}tool0">
+    <origin  xyz="0 0 0" rpy="0 0 ${pi / 4.0}" />
+  </xacro:snp_tool>
+
+</robot>
