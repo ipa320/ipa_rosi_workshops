@@ -20,7 +20,7 @@
 
   <!-- Process execution nodes: These monitor the state of robot's execution of the planned path. They can be, and in this case are, robot or vendor specific -->
   <group>
-    <node name="blend_process_execution" pkg="snp_prbt_support" type="prbt_blend_process_service_node">
+    <node name="blend_process_execution" pkg="snp_ur_support" type="ur_blend_process_service_node">
       <remap from="simulate_path" to="simulation/simulate_trajectory"/>
       <remap if="$(arg sim_robot)" from="joint_trajectory_action" to="/arm_controller/follow_joint_trajectory"/>
       <remap unless="$(arg sim_robot)" from="joint_trajectory_action" to="/follow_joint_trajectory"/>
