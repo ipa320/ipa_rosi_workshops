@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: snp_ur_description
+    relative_path: urdf/snp_ur_demo.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/snp_ur_description.srdf
+  CONFIG:
+    author_name: Harsh
+    author_email: harsh@fraunhofer.com
+    generated_timestamp: 1539953852
