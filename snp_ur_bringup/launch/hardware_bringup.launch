@@ -30,7 +30,7 @@
   </include>
 
   <!-- tool -->
-  <node name="snp_prbt_support" pkg="snp_ur_support" type="spindle_sim"/>
+  <node name="snp_ur_support" pkg="snp_ur_support" type="spindle_sim"/>
 
   <!-- camera -->
   <!--include file="$(find snp_prbt_support)/launch/setup_camera.launch" unless="$(arg sim_robot)">
