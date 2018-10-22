@@ -8,24 +8,6 @@
 
   <xacro:property name="prefix" value="prbt_"/>
 
-  <!-- world-->
-  <link name="world_frame"/>
-  <joint name="world_to_baselink" type="fixed">
-    <parent link="world_frame"/>
-    <child link="${prefix}base_link"/>
-  </joint>
-
-  <!-- robot -->
-  <xacro:prbt prefix="${prefix}"/>
-
-  <!-- table-->
-  <xacro:table parent="world_frame">
-    <origin  xyz="0 0 0" rpy="0 0 0" />
-  </xacro:table> 
-
-  <!-- tool -->
-  <xacro:snp_tool parent="${prefix}tool0">
-    <origin  xyz="0 0 0" rpy="0 0 ${5 * pi / 4.0}" />
-  </xacro:snp_tool> 
+  <!-- Add necessary xacros here-->
 
 </robot>
