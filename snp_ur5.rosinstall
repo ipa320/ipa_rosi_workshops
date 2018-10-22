@@ -7,7 +7,7 @@
 - git: {local-name: swri_profiler, uri: 'https://github.com/swri-robotics/swri_profiler.git', version: master}
 - git: {local-name: descartes, uri: 'https://github.com/ipa-hsd/descartes.git', version: automatica18}
 # Required for this implementation
-- git: {local-name: ur_modern_driver, uri: 'https://github.com/ros-industrial/ur_modern_driver.git'}
+- git: {local-name: ur_modern_driver, uri: 'https://github.com/ros-industrial/ur_modern_driver.git' version: kinetic-devel}
 - git: {local-name: ensenso_ros_driver, uri: 'https://github.com/ensenso/ros_driver.git'}
 - git: {local-name: pilz_robots, uri: 'https://github.com/PilzDE/pilz_robots', version: kinetic-devel}
 - git: {local-name: pilz_industrial_motion, uri: 'https://github.com/PilzDE/pilz_industrial_motion', version: kinetic-devel}
