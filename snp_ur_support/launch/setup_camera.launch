@@ -17,6 +17,6 @@
   </node> -->
 
   <!-- Ensenso request server -->
-  <node name="request_data_node" pkg="snp_prbt_support" type="ensenso_interface"/>
+  <node name="request_data_node" pkg="snp_ur_support" type="ensenso_interface"/>
 
 </launch>
