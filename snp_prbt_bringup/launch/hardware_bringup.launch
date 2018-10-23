@@ -30,11 +30,11 @@
   <!-- tool -->
   <node name="snp_ur_support" pkg="snp_ur_support" type="spindle_sim" if="$(arg sim_robot)"/>
 
-  <!-- camera -->
-  <include file="$(find snp_prbt_support)/launch/setup_camera.launch" unless="$(arg sim_robot)">
+  <!-- camera 
+  <include file="$(find snp_ur_support)/launch/setup_camera.launch" unless="$(arg sim_robot)">
     <arg name="roi_lower" value="{'x': -0.16, 'y': -0.4, 'z': 0.0}"/>
     <arg name="roi_upper" value="{'x':  0.16, 'y':  0.4, 'z': 0.6}"/>
-  </include>
+  </include>-->
 
 </launch>
 
