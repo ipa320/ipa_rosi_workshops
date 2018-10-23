@@ -38,7 +38,7 @@
     </joint>
 
     <!-- tool -->
-    <xacro:acf_110_01_xs_with_grinder parent="${prefix}tool_fixture" extent_factor="0.3" prefix="${prefix}" contact="true">
+    <xacro:acf_110_01_xs_with_grinder parent="${prefix}tool_fixture" extent_factor="0.3" prefix="${prefix}" contact="false">
       <origin  xyz="0 0 0.018" rpy="0 0 ${pi*0.5}" /> 
     </xacro:acf_110_01_xs_with_grinder> 
 

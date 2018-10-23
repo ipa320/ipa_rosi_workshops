@@ -73,6 +73,8 @@ public:
   CommandResult home(CommandLogFunc log) {
     move_group_.setPlannerId("PTP");
     move_group_.setNamedTarget("home");
+    move_group_.setMaxVelocityScalingFactor(0.1); 
+    move_group_.setMaxAccelerationScalingFactor(0.1); 
     move_group_.setStartStateToCurrentState();
     moveit::planning_interface::MoveItErrorCode eCode = move_group_.move();
     if(!eCode) {

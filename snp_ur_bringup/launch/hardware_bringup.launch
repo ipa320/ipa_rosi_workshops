@@ -6,9 +6,6 @@
   <arg name="controller_group" default="manipulator"/>
   <arg name="urdf_file" default="$(find snp_ur_description)/urdf/snp_ur_demo.urdf.xacro" />
 
-  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
-  <param name="robot_description" type="str" command="$(find xacro)/xacro --inorder '$(arg urdf_file)' sim:=$(arg sim_robot)"/>
-
   <!-- Robot -->
   <group if="$(arg sim_robot)">
     <include file="$(find snp_ur_bringup)/launch/ur_gazebo.launch"/>
@@ -20,6 +17,8 @@
     </include>
   </group>
 
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+  <param name="robot_description" type="str" command="$(find xacro)/xacro --inorder '$(arg urdf_file)' sim:=$(arg sim_robot)"/>
 
   <rosparam command="load" file="$(find snp_ur5_moveit_config)/config/joint_names.yaml"/>
 
