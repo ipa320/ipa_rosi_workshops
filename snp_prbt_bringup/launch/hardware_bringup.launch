@@ -3,7 +3,7 @@
 
   <arg name="sim_robot" default="false"/>
   <arg name="pipeline" default="command_planner"/>
-  <arg name="urdf_file" default="$(find snp_ur_description)/urdf/snp_ur_demo.urdf.xacro" />
+  <arg name="urdf_file" default="$(find snp_prbt_description)/urdf/snp_prbt_demo.urdf.xacro" />
 
   <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
   <param name="robot_description" type="str" command="$(find xacro)/xacro --inorder '$(arg urdf_file)' sim:=$(arg sim_robot)"/>
